@@ -18,6 +18,4 @@ Este proyecto tiene como objetivo aplicar y repasar los conceptos y funcionalida
 
 • **Spring Actuator:** Monitorización y gestión de la aplicación en tiempo de ejecución, proporcionando métricas, salud de la aplicación, y más.
 
-• **Testing:** Pruebas unitarias y de integración para asegurar la calidad del código.
-
 • **Spring Boot Data Rest:** Exposición de repositorios JPA directamente como servicios RESTful.
