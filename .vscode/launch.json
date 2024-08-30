@@ -1,0 +1,24 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-BuscaApplication<busca>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.springboot_esencial_mensajes.busca.BuscaApplication",
+            "projectName": "busca",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-ReunionesApplication<reuniones>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "es.dsrroma.school.springboot.reuniones.ReunionesApplication",
+            "projectName": "reuniones",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

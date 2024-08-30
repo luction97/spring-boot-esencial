@@ -1,6 +1,7 @@
 package es.dsrroma.school.springboot.reuniones.services;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
@@ -11,7 +12,7 @@ import es.dsrroma.school.springboot.reuniones.models.Persona;
 public class PersonaService {
 
 	private final PersonaRepository personaRepository;
-	
+
 	public PersonaService(PersonaRepository personaRepository) {
 		this.personaRepository = personaRepository;
 	}
@@ -21,6 +22,11 @@ public class PersonaService {
 	}
 
 	public Persona savePersona(Persona persona) {
-        return personaRepository.save(persona);
-    }
+		return personaRepository.save(persona);
+	}
+
+	public Optional<Persona> getById(long id) {
+		return personaRepository.findById(id);
+	}
+
 }

@@ -1,5 +1,6 @@
 package es.dsrroma.school.springboot.reuniones.models;
 
+import java.util.Set;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
@@ -23,7 +24,7 @@ public class Usuario {
 
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(name = "usuario_roles", joinColumns = @JoinColumn(name = "usuario_id"), inverseJoinColumns = @JoinColumn(name = "rol_id"))
-    private String role;
+    private Set<Rol> roles;
 
     // Getters y Setters
 
@@ -51,16 +52,16 @@ public class Usuario {
         this.enabled = enabled;
     }
 
-    public String getRole() {
-        return role;
-    }
-
-    public void setRole(String role) {
-        this.role = role;
-    }
-
     public long getId() {
         return id;
+    }
+
+    public Set<Rol> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(Set<Rol> roles) {
+        this.roles = roles;
     }
 
 }
