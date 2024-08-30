@@ -27,9 +27,23 @@ spring:
     username: root
     password: admin
     driver-class-name: "com.mysql.cj.jdbc.Driver"
-
+  data:
+    rest:
+     base-path: "/api/rest"
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+     health:
+       roles: "USER"
+       show-details: "WHEN_AUTHORIZED"
+       
 server:
   port: 8081
+
+
 ---
 spring:
   config:
